@@ -1,0 +1,16 @@
+.paner-video {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.paner-video video {
+  outline: none;
+  border-radius: 35px 35px;
+  background-color: black;
+}
+
+.singleMov {
+  display: block;
+
+}

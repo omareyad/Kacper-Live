@@ -1,0 +1,405 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.validation-error {
+  color: red;
+}
+
+
+/* swiper css*/
+html,
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #141414;
+  overflow-x: hidden;
+
+}
+
+/* CSS VARIABLES */
+:root {
+  --primary: #141414;
+  --light: #F3F3F3;
+  --dark: #686868;
+}
+
+.netflix {
+  width: 100vw;
+  min-height: 100vh;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary);
+  color: var(--light);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+.netflix img {
+  max-width: 100%;
+}
+
+.netflix h1 {
+  padding-top: 60px;
+  color: white;
+  text-align: right;
+  margin: 30px 10px 40px;
+  font-size: 30px;
+  text-shadow: 0px 3px 13px;
+}
+
+.netflix .wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.box a {
+  position: relative;
+}
+
+.box a:hover .over {
+
+  transition: .4s ease-in-out;
+  opacity: 1;
+  overflow: hidden;
+
+
+}
+
+.box a:hover .over2 {
+  opacity: 0;
+  transition: .4s ease-in-out;
+}
+
+.over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  background: #0c0c0ca6;
+
+
+}
+
+.over a {
+  position: initial;
+}
+
+.over2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  height: 100%;
+  background: rgba(48, 53, 66, 0.56);
+
+}
+
+.over2 span {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
+
+
+
+.over a i {
+  position: absolute;
+  top: 32%;
+  left: 41%;
+  font-size: 44px;
+  color: white;
+  background: #f82249;
+  border-radius: 50%;
+  height: 38px;
+  line-height: 39px;
+  width: 38px;
+}
+
+.box a img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-nav {
+  grid-area: mn;
+  padding: 0 30px 0 20px;
+}
+
+
+/* MAIN CONTIANER */
+.netflix .main-container {
+  padding: 50px;
+}
+
+.netflix .box {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.netflix .box a {
+  transition: transform .3s;
+  margin-top: 50px;
+}
+
+.netflix .box a:hover {
+  transition: transform .3s;
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.netflix .box img {
+  border-radius: 2px;
+}
+
+/* LINKS */
+.netflix .link {
+  padding: 50px;
+}
+
+.netflix .sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.netflix .sub-links a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.netflix .sub-links a:hover {
+  color: var(--dark);
+  text-decoration: underline;
+}
+
+.netflix .logos a {
+  padding: 10px;
+}
+
+.netflix .logo {
+  color: var(--dark);
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media(max-width: 900px) {
+
+  .netflix header {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "nt nt nt  .  .  . sb . . . "
+      "mn mn mn mn mn mn  mn mn mn mn";
+  }
+
+  .netflix .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+
+}
+
+@media(max-width: 700px) {
+
+  .netflix header {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "nt nt nt  .  .  . sb . . . "
+      "mn mn mn mn mn mn  mn mn mn mn";
+  }
+
+  .netflix .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  .netflix .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media(max-width: 500px) {
+
+  .netflix .wrapper {
+    font-size: 15px;
+  }
+
+  .netflix header {
+    margin: 0;
+    padding: 20px 0 0 0;
+    position: static;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "nt"
+      "mn"
+      "sb";
+    text-align: center;
+  }
+
+  .netflix .netflixLogo {
+    max-width: 100%;
+    margin: auto;
+    padding-right: 20px;
+  }
+
+  .netflix .main-nav {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .netflix h1 {
+    text-align: center;
+    font-size: 18px;
+  }
+
+
+
+  .netflix .box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .netflix .box a:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1.2);
+  }
+
+  .netflix .logos {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+  }
+
+  .netflix .sub-links ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    font-size: 15px;
+  }
+
+
+
+
+
+}
+
+
+/*loader*/
+
+
+
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1b1b1b;
+  background-image: url("https://cdn.dribbble.com/users/2239512/screenshots/5257668/boxloading.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ok {
+  display: none;
+}
+
+.over .title {
+  color: white;
+  font-size: 18px;
+  font-family: 'tajawal', sans-serif;
+  top: 5%;
+  left: 20%;
+  font-weight: 900;
+  text-shadow: 0px 0px 50px black;
+  position: relative;
+}
+
+
+
+.my-video,
+#vid1 {
+  width: 100%;
+  height: 320px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+@media (min-width: 1200px) {
+
+  .my-video,
+  #vid1 {
+    width: 1170px;
+    height: 520.125px;
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .my-video,
+  #vid1 {
+    width: 940px;
+    height: 528.75px;
+    margin-top: 120px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .my-video,
+  #vid1 {
+    width: 728px;
+    height: 409.5px;
+    margin-top: 100px;
+  }
+}
+
+
+
+/*
+#my-video {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 175px;
+}
+*/

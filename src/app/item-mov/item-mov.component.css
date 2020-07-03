@@ -1,0 +1,11 @@
+.cont-vid {
+  margin: 0 auto;
+  padding: 3rem !important;
+  margin-top: 130px;
+}
+
+.cont-vid h2,
+span,
+a {
+  color: white;
+}

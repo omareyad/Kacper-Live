@@ -1,0 +1,60 @@
+<div class="paner-video">
+
+
+  <!--
+  <video autoplay class="my-video" [src]="srv.single2.src" controls buffered>
+
+  </video>
+
+-->
+
+  <iframe class="my-video" src="" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=640 HEIGHT=360
+    allowfullscreen></iframe>
+
+
+
+</div>
+
+
+
+
+<div class="netflix" *ngIf="srv.single2.numof?.length > 0">
+  <div class="wrapper">
+
+
+    <section class="main-container">
+      <div class="location" id="home">
+        <h1 id="home">{{srv.single2.title}}</h1>
+        <div class="box">
+
+          <a *ngFor="let list of srv.single2.numof;let i=index">
+
+
+
+            <div class="over">
+              <a (click)="changeSrc(list)" style="cursor: pointer;"> <i style="top: 45%"
+                  class="fa fa-play-circle"></i></a>
+              <p class="title" style="left: 0%;text-align: center;"> {{srv.single2.title}} <br> حلقة {{i+1}} </p>
+
+
+            </div>
+            <!-- <div class="over2">
+                      <span> {{list.title}} </span> <br>
+                      <span style="top: 50%;">{{list.category}} </span>
+                    </div>-->
+            <img [src]="srv.single2.imgurl" [alt]="srv.single2.title">
+
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    </section>
+  </div>
+</div>

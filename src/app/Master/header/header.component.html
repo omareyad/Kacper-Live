@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Casper</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="Movies live Casper " name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+
+
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container wow fadeIn">
+      <h1 class="mb-4 pb-0 explor"><br><span>إستكشف </span> الآن ما لدينا <img class="headerimg flip-scale-2-ver-left"
+          src="https://www.stickpng.com/assets/thumbs/5a9933f09fc609199d0ff011.png"></h1>
+      <p class="mb-4 pb-0">شاهد كل ما تريد , الأمر أصبح أسهل </p>
+      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>
+      <a href="#about" class="about-btn scrollto">انطلق</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <section id="about">
+      <div class="container" style="text-align: right;margin:0;">
+        <div class="row" style="direction: rtl;">
+          <div class="col-lg-4" style="top: -20px">
+            <h2>ما نقدم ؟</h2>
+            <p>المسلسلات والأفلام المحلية والعالمية بجودة عالية<br> بالإضافة الى البث المباشر للقنوات </p>
+          </div>
+          <div class="col-lg-4">
+            <h3>باقة بين سبورت </h3>
+            <p>النقل المباشر للقنوات الرياضية المشفره على موقعنا </p>
+          </div>
+          <div class="col-lg-4">
+            <h3>الميزات</h3>
+            <p>الموقع متوافق مع كل الشاشات</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--==========================
+      Hotels Section
+    ============================-->
+    <section id="hotels" class="section-with-bg wow fadeInUp">
+
+      <div class="container">
+        <div class="section-header">
+          <h2>اختر ما تريد</h2>
+          <p>كل شيء اصبح الآن اسهل </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" *ngFor="let list of srvMovies.categoryArr;let i = index">
+            <div class="hotel">
+              <div class="hotel-img">
+                <img [src]="list.imgsrc" alt="Casper Live" class="img-fluid">
+              </div>
+              <h3><a href="#">{{list.name}}</a></h3>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--==========================
+      Gallery Section  *ngFor="let list of listMovies"
+    ============================-->
+    <app-item-mov></app-item-mov>
+
+
+  </main>
+
+
+
+
+</body>
+
+</html>
